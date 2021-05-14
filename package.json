@@ -1,0 +1,17 @@
+{
+  "name": "cvtailwind",
+  "version": "1.0.0",
+  "description": "This repository is for tracking the learning curve of tailwindCSS. Here I will design my CV as a 2nd training project of DSi.",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "npx tailwindcss-cli@latest build ./src/styles.css -o ./public/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.15",
+    "tailwindcss": "^2.1.2"
+  }
+}
