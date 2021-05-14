@@ -43,4 +43,16 @@ We create a src folder where all of our src files will be there and write all of
 @tailwind utilities;
 ```
 2. In your scripts inside package.json remove existings and put `"build-css": "npx tailwindcss-cli@latest build ./src/styles.css -o ./public/styles.css"`
-3. Run `npm run build-css` which will build tailwind necessary utility files.
+3. Run `npm run build-css` which will build tailwind necessary utility classes.
+
+Any changes made inside src/styles.css will be updated public/styles.css. 
+
+### Start Live server and viewing HTML output
+
+Installing live server globally and live the public folder only.
+```
+sudo npm install live-server -g
+live-server public
+```
+Without any CSS we are viewing default browser styles. So to link `public/styles.css` we will use `link` tag inside `public/index.html`. After adding css our whole design becomes same as we didn't define any utility class so far.
+
