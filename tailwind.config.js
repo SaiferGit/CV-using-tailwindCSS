@@ -16,7 +16,7 @@ module.exports = {
         '1': '1px'
       },
       colors: {
-        'body-color': '#b5c2b7',
+        'body-color': '#8BBEB2',//b5c2b7, FFFDDD, 55bcc9
         'dark-gray': '#84838b', //84838b
         'white': '#ffffff',
         'black': '#26252d',
