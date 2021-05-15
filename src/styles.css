@@ -1,5 +1,11 @@
+ /* getting custom webfonts */
+ @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+
 /* getting all the functionalities from tailwind inject Tailwind's base, components, and utilities styles:*/
 /* ./your-css-folder/styles.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+

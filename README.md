@@ -56,3 +56,27 @@ live-server public
 ```
 Without any CSS we are viewing default browser styles. So to link `public/styles.css` we will use `link` tag inside `public/index.html`. After adding css our whole design becomes same as we didn't define any utility class so far.
 
+## tailwind-config file
+We can extend a property or overwrite the default one.
+- To create: `npx tailwind@latest init` or full version with default values `npx tailwind@latest init -full`.
+- Everytime when we made changes we need to rebuild the css using `npm run build-css`.
+
+## responsiveness in tailwind
+Tailwind is a mobile-first approach. It starts with the smallest possible device. 
+
+## @apply
+If we have same classes which need to write again and again we can use our custom class and apply the directives.
+```
+.<custom name> {
+    @apply <all the classes here>;
+}
+```
+Then instead of writing all the classes, just use `<custom name>`.
+
+## pseudo elements in tailwind
+So far, tailwind didn't cover pseudo elements like `::before` and `::after`. [Issues opend in Tailwind Github Repo](https://github.com/tailwindlabs/tailwindcss/discussions/2119). But there are few plugins by which we can use them [Link1](https://openbase.com/js/tailwindcss-pseudo/documentation), [Link2](https://github.com/croutonn/tailwindcss-pseudo-elements).
+- Install plugin:
+```
+npm i tailwindcss-pseudo 
+npm install tailwindcss-pseudo-elements --save-dev
+```
