@@ -2,12 +2,6 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    // screens: {
-    //   sm: '424px',
-    //   md: '800px',
-    //   lg: '999px',
-    //   xl: '1000px',
-    // },
     extend: {
       fontSize: {
         '2.3': '25px'
@@ -63,10 +57,3 @@ module.exports = {
   plugins: [
   ],
 }
-
-// screens: {
-//   sm: '480px',
-//   md: '768px',
-//   lg: '976px',
-//   xl: '1440px',
-// }
