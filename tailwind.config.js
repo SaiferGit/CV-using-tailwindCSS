@@ -21,6 +21,7 @@ module.exports = {
         'lighterblue': '#EAFFFD',
         'color1': '#c2e1e5',
         'color2': '#EAFFFD',
+        'tea-green': '#d6fffb',
       },
       fontFamily: {
         bodyFont: ['Roboto'],

@@ -40,9 +40,12 @@
      
      <div class="py-5 px-0 border-b	border-solid border-dark-gray"> <!-- resume_item resume_address -->
       <div class="text-black uppercase font-bold leading-6 text-xl mb-2.5 tracking-title">Address</div> <!-- resume_title-->
-      <div class="text-black"> <!-- resume_info -->
-       <i class="fas fa-map-marker-alt text-black mr-1.5 text-xl"></i> 47, Chourhash Colony Road, <br>
-       Fultala, Kushtia 7000, Bangladesh
+      <div class="text-black flex"> <!-- resume_info -->
+       <i onclick="showCurrWeather()" class="fas fa-map-marker-alt text-black mr-1.5 mt-0 md:mt-2 text-xl cursor-pointer animate-bounce"></i> 
+       <span class="">
+        47, Chourhash Colony Road,
+        Fultala, Kushtia 7000, Bangladesh
+       </span>
       </div>
      </div>
      
@@ -102,7 +105,7 @@
      </div>
      
      <!-- List of skills -->
-     <div class="py-5 px-0 border-b	border-solid border-dark-gray"> <!-- resume_item resume_skills -->
+     <div class="py-5 px-0"> <!-- resume_item resume_skills -->
       <div class="text-black uppercase font-bold leading-6 text-xl mb-2.5 tracking-title"> <!-- resume_title -->
           Technical Skills
       </div>
@@ -110,7 +113,7 @@
        
        <!-- programming languages -->
        <div class="flex justify-between mb-1.5"> <!-- skills_list -->
-         <div class="text-black"> <!-- skills_left -->
+         <div class="text-black font-bold"> <!-- skills_left -->
              Programming Languages
          </div>
          <div class="relative h-5"> <!-- skills_bar -->
@@ -122,7 +125,7 @@
        
        <!-- Scripting -->
        <div class="flex justify-between mb-1.5"> <!-- skills_list -->
-         <div class="text-black"> <!-- skills_left -->
+         <div class="text-black font-bold"> <!-- skills_left -->
              Scripting
          </div>
          <div class="relative h-5"> <!-- skills_bar -->
@@ -134,19 +137,19 @@
  
        <!-- Frameworks -->
        <div class="flex justify-between mb-1.5"> <!-- skills_list -->
-         <div class="text-black"> <!-- skills_left -->
+         <div class="text-black font-bold"> <!-- skills_left -->
              Frameworks
          </div>
          <div class="relative h-5"> <!-- skills_bar -->
            <p>
-             Android
+             Android, Tailwind
            </p>
          </div>
        </div>
  
        <!-- Tools -->
        <div class="flex justify-between mb-1.5"> <!-- skills_list -->
-         <div class="text-black"> <!-- skills_left -->
+         <div class="text-black font-bold"> <!-- skills_left -->
              Tools
          </div>
          <div class="relative h-5"> <!-- skills_bar -->
@@ -158,7 +161,7 @@
  
        <!-- Version Control -->
        <div class="flex justify-between mb-1.5"> <!-- skills_list -->
-         <div class="text-black"> <!-- skills_left -->
+         <div class="text-black font-bold"> <!-- skills_left -->
              Version Control
          </div>
          <div class="relative h-5"> <!-- skills_bar -->
@@ -181,40 +184,6 @@
       </div>
      </div>
  
-     <!-- list of interests goes here -->
-     <div class="py-5 px-0 border-b-0 border-solid border-dark-gray"> <!-- resume_item resume_interests -->
-         <div class="text-black uppercase font-bold leading-6 text-xl mb-2.5 tracking-title"><!--resume_title-->
-         Interests
-         </div>
-         <div class="text-black flex justify-between text-center"> <!-- resume_info -->
-         <div class=""> <!-- interests -->
-             <div class="text-4xl mb-2.5 text-blue"> <!-- int_icon -->
-             <i class="fas fa-gamepad"></i>
-             </div>
-             <div class=""> <!-- int_data -->
-             Gaming
-             </div>
-         </div>
-     
-         <div class=""> <!-- interests -->
-           <div class="text-4xl mb-2.5 text-blue"> <!-- int_icon -->
-             <i class="fas fa-biking"></i>
-           </div>
-           <div class=""> <!-- int_data -->
-             Cycling
-           </div>
-         </div>
-     
-         <div class=""> <!--  interests -->
-           <div class="text-4xl mb-2.5 text-blue"> <!--  int_icon-->
-             <i class="fas fa-book-reader"></i>
-           </div>
-           <div class=""> <!-- int_data -->
-             Research
-           </div>
-         </div>
-       </div>
-     </div>
     </div>
    </div>
  
@@ -236,69 +205,105 @@
              Education
          </div>
       <div class=""> <!-- resume_info -->
-       <div class="flex"> <!-- resume_data -->
-         <div class="pr-8.75 w-7.25 relative"> <!-- year -->
-             2017-2021
+        <div class="flex bg-tea-green border-color1 border-2 rounded-xl pl-2 pt-2 mb-0"> <!-- resume_data -->
+          <div class="pr-8.75 w-44 relative"> <!-- year -->
+              2017-2021
         <div class=" absolute shadow-2xl skyblue h-3.5 w-3.5 top-1.25 right-0 border rounded-full bg-blue hidden sm:block md:block xl:block"></div>
         </div>
-        <div class="pl-8.75 mb-5 p-0 w-calc"> <!-- content -->
+        <div class="pl-8.75 mb-1 p-0 w-calc"> <!-- content -->
+          
+          <div>
+            <!-- div for expand-collapse -->
+          <div class="flex justify-between">
             <p class="font-bold"> <!-- content-title -->
-             Shahjalal University of Science and Technology
-         </p>
-         <p class="italic"> <!-- content-position -->
-             BSc in Computer Science and Engineering
-         </p>
-         <p>
-         <ul class="list-item list-disc ml-8">
-             <li>
-                 CGPA: <b>3.78</b> on a scale of <b>4.00</b> (Top <b>6%</b>)
-             </li>
-         </ul>
-         </p>
+              Shahjalal University of Science and Technology
+            </p>
+            <i onclick="hideAndShow(this, 'edu-item1')" class="animate-bounce text-lg mt-2 pr-2 fas fa-chevron-down justify-end cursor-pointer"></i>
+          </div>
+          <!-- end of expand-collapse div -->
+          
+          <div id="edu-item1" class="hidden">
+            <p class="italic"> <!-- content-position -->
+              BSc in Computer Science and Engineering
+            </p>
+            <p>
+            <ul class="list-item list-disc ml-8">
+              <li>
+                  CGPA: <b>3.78</b> on a scale of <b>4.00</b> (Top <b>6%</b>)
+              </li>
+            </ul>
+            </p>
+          </div>
+          </div>
+          
         </div>
-    </div>
+        </div>
  
-       <div class="flex"> <!-- resume_data -->
-        <div class="pr-8.75 w-7.25 relative"> <!-- year -->
+       <div class=" mt-1 flex bg-tea-green border-color1 border-2 rounded-xl pl-2 pt-2"> <!-- resume_data -->
+        <div class="pr-8.75 w-44 relative"> <!-- year -->
             2014-2016
         <div class=" absolute shadow-2xl skyblue h-3.5 w-3.5 top-1.25 right-0 border rounded-full bg-blue hidden sm:block md:block xl:block"></div>
          </div>
-         <div class="pl-8.75 mb-5 w-calc p-0"> <!--  content -->
-         <p class="font-bold"> <!-- content-title -->
-             Kushtia Govt. College
-         </p>
-         <p class="italic"> <!-- content-position -->
-             Higher Secondary School Certificate (HSC)
-         </p>
-         <p>
-           <ul class="list-item list-disc ml-8">
-             <li class="">
-                 GPA: <b>5.00</b> on a scale of <b>5.00</b>
-             </li>
-           </ul>
-         </p>
+         <div class="pl-8.75 mb-1 w-calc p-0"> <!--  content -->
+          
+          <div>
+            <!-- div for expand-collapse -->
+            <div class="flex justify-between">
+              <p class="font-bold"> <!-- content-title -->
+                Kushtia Govt. College
+              </p>
+              <i onclick="hideAndShow(this, 'edu-item2')" class="animate-bounce text-lg mt-2 pr-2 fas fa-chevron-down justify-end cursor-pointer"></i>  
+            </div>
+          <!-- end of expand-collapse div -->
+
+            <div id="edu-item2" class="hidden">
+              <p class="italic"> <!-- content-position -->
+                Higher Secondary School Certificate (HSC)
+              </p>
+              <p>
+              <ul class="list-item list-disc ml-8">
+                <li class="">
+                    GPA: <b>5.00</b> on a scale of <b>5.00</b>
+                </li>
+              </ul>
+              </p>
+            </div>
+          </div>
+
         </div>
        </div>
  
-       <div class="flex"> <!-- resume_data -->
-        <div class="pr-8.75 relative w-7.25"> <!-- year -->
+       <div class="mt-1 flex bg-tea-green border-color1 border-2 rounded-lg pl-2 pt-2"> <!-- resume_data -->
+        <div class="pr-8.75 relative w-44"> <!-- year -->
             2009-2014
         <div class=" absolute shadow-2xl skyblue h-3.5 w-3.5 top-1.25 right-0 border rounded-full bg-blue hidden sm:block md:block xl:block"></div>
          </div>
-         <div class="pl-8.75 mb-5 w-calc p-0"> <!--content  -->
-         <p  class="font-bold"> <!-- content-title -->
-             Kushtia Zilla School
-         </p>
-         <p class="italic"> <!-- content-position -->
-             Secondary School Certificate (SSC)
-         </p>
-         <p>
-         <ul class="list-item list-disc ml-8">
-             <li>
-                 GPA: <b>5.00</b> on a scale of <b>5.00</b>
-             </li>
-         </ul>
-         </p>
+         <div class="pl-8.75 mb-1 w-calc p-0"> <!--content  -->
+          <div>
+            <div>
+              <div class="flex justify-between">
+                <!-- div for expand-collapse -->
+                <p  class="font-bold"> <!-- content-title -->
+                  Kushtia Zilla School
+                </p>
+                <i onclick="hideAndShow(this, 'edu-item3')" class="animate-bounce text-lg mt-2 pr-2 fas fa-chevron-down justify-end cursor-pointer"></i>
+              </div>
+              <!-- end of expand-collapse div -->
+              
+              <div id="edu-item3" class="hidden">
+                <p class="italic"> <!-- content-position -->
+                  Secondary School Certificate (SSC)
+                </p>
+                <p>
+                <ul class="list-item list-disc ml-8">
+                  <li>
+                      GPA: <b>5.00</b> on a scale of <b>5.00</b>
+                  </li>
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
        </div>
       </div>
@@ -310,40 +315,58 @@
          </div> <!--  -->
       <div class=""> <!-- resume_info -->
        
-       <div class="flex"> <!-- resume_data -->
-         <div class="pr-8.75 relative mb-1 sm:mb-3 sm:w-7.25"> <!-- year -->
-             May, 2021 - Present
-        <div class=" absolute shadow-2xl skyblue h-3.5 w-3.5 top-1.25 right-0 border rounded-full bg-blue hidden sm:block md:block xl:block"></div>
+       <div class="flex bg-tea-green border-color1 border-2 rounded-xl pl-2 pt-2 mb-0"> <!-- resume_data -->
+         <div class="pr-8.75 relative mb-1 sm:mb-3 sm:w-44"> <!-- year -->
+             05/21 - Present
+        <div class=" absolute shadow-2xl skyblue h-3.5 w-3.5 top-1.25 right-0 border rounded-full bg-blue hidden sm:block"></div>
          </div>
-         <div class="pl-8.75 mb-5 w-calc p-0"> <!-- content -->
-         <p  class="font-bold"> <!-- content-title -->
-             Dynamic Solution Innovators
-         </p>
-         <p class="italic"> <!-- content-position -->
-             Junior Software Engineer
-         </p>
+         <div class="pl-8.75 mb-1 w-calc p-0"> <!-- content -->
+         
+          <!-- div for expand-collapse -->
+          <div class="flex justify-between">
+            <p  class="font-bold"> <!-- content-title -->
+              Dynamic Solution Innovators
+            </p>
+            <i onclick="hideAndShow(this, 'exp-item1')" class="animate-bounce text-lg mt-2 pr-2 fas fa-chevron-down justify-end cursor-pointer"></i>
+          </div>
+          <!-- end of expand-collapse div -->
+
+          <div id="exp-item1" class="hidden">
+            <p class="italic"> <!-- content-position -->
+              Junior Software Engineer
+            </p>
+          </div>
+          
         </div>
        </div>
 
-       <div class="flex"> <!-- resume_data -->
-        <div class="pr-8.75 relative mb-1 sm:mb-0 md:mb-0 lg:mb-0 sm:w-7.25 md:w-7.25 lg:w-7.25"> <!-- year -->
-            Jul, 2020 - Aug. 2020
+       <div class="mt-1 flex bg-tea-green border-color1 border-2 rounded-xl pl-2 pt-2"> <!-- resume_data -->
+        <div class="pr-7 relative mb-1 sm:mb-0 md:mb-0 lg:mb-0 sm:w-44"> <!-- year -->
+            06/2020 - 07/2020
         <div class=" absolute shadow-2xl skyblue h-3.5 w-3.5 top-1.25 right-0 border rounded-full bg-blue hidden sm:block md:block xl:block"></div>
         </div>
-       <div class="pl-8.75 mb-5 max-w-6/12 w-calc p-0"> <!-- content -->
-        <p class="font-bold"> <!-- content-title -->
-            WIB Corporation
-        </p>
-        <p class="italic"> <!-- content-position -->
-            Intern Software Engineer
-        </p>
-        <p>
+       <div class="pl-8.75 mb-1 max-w-6/12 w-calc p-0"> <!-- content -->
+          
+          <!-- div for expand-collapse -->
+          <div class="flex justify-between">
+            <p class="font-bold"> <!-- content-title -->
+              WIB Corporation
+            </p>
+            <i onclick="hideAndShow(this, 'exp-item2')" class="animate-bounce text-lg mt-2 pr-2 fas fa-chevron-down justify-end cursor-pointer"></i>
+          </div>
+          <!-- end of expand-collapse div -->
+          <div id="exp-item2" class="hidden">
+            <p class="italic"> <!-- content-position -->
+              Intern Software Engineer
+            </p>
+            <p>
             Understanding their spring services, implement few modules as per instrutions:
             <ul class="list-item list-disc ml-8 max-w-6/12">
                 <li>Dockerize all of their services, upgade their services into latest versions</li>
                 <li> Implemented feedback service and mailer service</li>
             </ul>
-        </p>
+            </p>
+          </div>
        </div>
       </div>
        
@@ -357,122 +380,240 @@
              Projects
          </div>
        <div class=""> <!-- resume_info -->
-         <ul class="list-item list-disc ml-8">
-     
-           <li>
-             <div class=""> <!-- resume_data -->
-               <div class="pl-3 w-full mb-5"> <!-- content -->
-                 <p class="font-bold"> <!-- content-title -->
-                     Digital Laundry | <i class="font-normal">Java, Android SDK, Firebase</i> 
-                     <a class="ml-2 text-blue hover:text-red hover:underline" href="https://github.com/SaiferGit/DigitalLaundry"> [Link]</a>
-                 </p>
-                 <p>
-                     Digitalize Laundry process to get laundry system in our doorstep.
-                 </p>
-               </div>
+         <!-- <ul class="list-item ml-8"> -->
+          
+          <div class="flex relative">
+            <div class=" ml-2 absolute shadow-2xl skyblue h-3.5 w-3.5 top-3 left-0 border rounded-full bg-blue hidden sm:block md:block xl:block"></div>
+            
+            <ul class="list-item w-full ml-8">
+              <li>
+                <div class=" bg-tea-green border-color1 border-2 rounded-xl pt-2 pl-2"> <!-- resume_data -->
+                  <div class="pl-3 w-full mb-1"> <!-- content -->
+                    <div>
+                     <div class="flex justify-between">
+                       <p class="font-bold"> <!-- content-title -->
+                         Digital Laundry | <i class="font-normal">Java, Android SDK, Firebase</i> 
+                       </p>
+                       <i onclick="hideAndShow(this, 'proj-item1')" class=" pt-1 animate-bounce text-lg  pr-2 fas fa-chevron-down justify-end cursor-pointer"></i>
+                     </div>
+                      <div id="proj-item1" class="hidden">
+                       <p>
+                         Digitalize Laundry process to get laundry system in our doorstep.
+                       <a class="font-bold ml-2 text-blue hover:text-red hover:underline" href="https://github.com/SaiferGit/DigitalLaundry"> [Link]</a>
+                     </p>
+                      </div>
+                    </div>
              </div>
-           </li>
-     
-           <li>
-             <div class=""> <!-- resume_data -->
-               <div class="pl-3 w-full mb-5"> <!-- content -->
-                 <p class="font-bold"> <!-- content-title -->
-                     ChitChat P2P Messaging App | <i class="font-normal">Java, Android SDK, Socket</i> 
-                     <a class="ml-2 text-blue hover:text-red hover:underline" href="https://github.com/SaiferGit/Android-P2P-Messenger"> [Link]</a>
-                 </p>
-                 <p>
-                     Network Layer messenger application, runs on Android environment. It Supports only P2P data exchanging
-                   using Java Socket.
-                 </p>
-               </div>
-             </div>
-           </li>
-     
-           <li>
-             <div class=""> <!-- resume_data -->
-               <div class="pl-3 w-full mb-5"> <!-- content -->
-                 <p class="font-bold"> <!-- content-title -->
-                     Question Answering App | <i class="font-normal">Java, Android SDK, Firebase</i> 
-                     <a class="ml-2 text-blue hover:text-red hover:underline" href="https://github.com/SaiferGit/Question-Answering-APP"> [Link]</a>
-                 </p>
-                 <p>
-                     Main purpose of this app is to collect data from people. Mainly 2 types of answer can be collected:
-                   MCQ and short written answer.
-                 </p>
-               </div>
-             </div>
-           </li>
-     
-           <li>
-             <div class=""> <!-- resume_data -->
-               <div class="pl-3 w-full mb-5"> <!-- content -->
-                 <p class="font-bold"> <!-- content-title -->
-                     AI Player | <i class="font-normal">Java, Android SDK, MySQL</i> 
-                     <a class="ml-2 text-blue hover:text-red hover:underline" href="https://github.com/SaiferGit/AI-Player"> [Link]</a>
-                 </p>
-                 <p>
-                     Voice controlled music player, designed attractive frontend for music.
-                 </p>
-               </div>
-             </div>
-           </li>
-     
-           <li>
-             <div class=""> <!-- resume_data -->
-               <div class="pl-3 w-full mb-5"> <!--content-->
-                 <p class="font-bold"> <!-- content-title -->
-                     SUST Online Examination System Frontend | <i  class="font-normal">React, Bootstrap, HTML, CSS</i> 
-                     <a class="ml-2 text-blue hover:text-red hover:underline" href="https://github.com/SaiferGit/SUST-Online-Examination-System-Frontend/tree/master"> [Link]</a>
-                 </p>
-                 <p>
-                     Developed an online platform for SUST Examination system.
-                 </p>
-               </div>
-             </div>
-           </li>
-         </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="flex relative">
+            <div class=" ml-2 absolute shadow-2xl skyblue h-3.5 w-3.5 top-6 left-0 border rounded-full bg-blue hidden sm:block md:block xl:block"></div>
+            
+            <ul class="list-item w-full ml-8">
+              <li>
+                <div class="mt-1 bg-tea-green border-color1 border-2 rounded-xl pl-2 pt-2"> <!-- resume_data -->
+                  <div class="pl-3 w-full mb-1"> <!-- content -->
+                   <div>
+                     <div class="flex justify-between">
+                       <p class="font-bold"> <!-- content-title -->
+                         ChitChat P2P Messaging App | <i class="font-normal">Java, Android SDK, Socket</i> 
+                       </p>
+                       <i onclick="hideAndShow(this, 'proj-item2')" class=" pt-1 animate-bounce text-lg  pr-2 fas fa-chevron-down justify-end cursor-pointer"></i>
+                     </div>
+                     <div id="proj-item2" class="hidden">
+                       <p>
+                         Network Layer messenger application, runs on Android environment. It Supports only P2P data exchanging
+                         using Java Socket.
+                         <a class="font-bold ml-2 text-blue hover:text-red hover:underline" href="https://github.com/SaiferGit/Android-P2P-Messenger"> [Link]</a>
+                       </p>
+                     </div>
+                   </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="flex relative">
+            <div class=" ml-2 absolute shadow-2xl skyblue h-3.5 w-3.5 top-6 left-0 border rounded-full bg-blue hidden sm:block md:block xl:block"></div>
+            
+            <ul class="list-item w-full ml-8">
+              <li>
+                <div class="mt-1 bg-tea-green border-color1 border-2 rounded-xl pl-2 pt-2"> <!-- resume_data -->
+                  <div class="pl-3 w-full mb-1"> <!-- content -->
+                   
+                   <div>
+                     <div class="flex justify-between">
+                       <p class="font-bold"> <!-- content-title -->
+                         Question Answering App | <i class="font-normal">Java, Android SDK, Firebase</i> 
+                       </p>
+                       <i onclick="hideAndShow(this, 'proj-item3')" class=" pt-1 animate-bounce text-lg  pr-2 fas fa-chevron-down justify-end cursor-pointer"></i>
+                     </div>
+                     
+                     <div id="proj-item3" class="hidden">
+                       <p>
+                         Main purpose of this app is to collect data from people. Mainly 2 types of answer can be collected:
+                         MCQ and short written answer.
+                         <a class="font-bold ml-2 text-blue hover:text-red hover:underline" href="https://github.com/SaiferGit/Question-Answering-APP"> [Link]</a>
+                       </p>
+                     </div>
+                   </div>
+                   
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+           
+          <div class="flex relative">
+            <div class=" ml-2 absolute shadow-2xl skyblue h-3.5 w-3.5 top-4 left-0 border rounded-full bg-blue hidden sm:block md:block xl:block"></div>
+            
+            <ul class="list-item w-full ml-8">
+              <li>
+                <div class="mt-1 bg-tea-green border-color1 border-2 rounded-xl pl-2 pt-2"> <!-- resume_data -->
+                  <div class="pl-3 w-full mb-1"> <!-- content -->
+                   
+                   <div>
+                     <div class="flex justify-between">
+                       <p class="font-bold"> <!-- content-title -->
+                         AI Player | <i class="font-normal">Java, Android SDK, MySQL</i> 
+                       </p>
+                       <i onclick="hideAndShow(this, 'proj-item4')" class=" pt-1 animate-bounce text-lg  pr-2 fas fa-chevron-down justify-end cursor-pointer"></i>
+                     </div>
+                     
+                     <div id="proj-item4" class="hidden">
+                       <p>
+                         Voice controlled music player, designed attractive frontend for music.
+                         <a class="font-bold ml-2 text-blue hover:text-red hover:underline" href="https://github.com/SaiferGit/AI-Player"> [Link]</a>
+                       </p>
+                     </div>
+                   </div>
+                   
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+           
+          <div class="flex relative">
+            <div class=" ml-2 absolute shadow-2xl skyblue h-3.5 w-3.5 top-6 left-0 border rounded-full bg-blue hidden sm:block md:block xl:block"></div>
+            
+            <ul class="list-item w-full ml-8">
+              <li>
+                <div class="mt-1 bg-tea-green border-color1 border-2 rounded-xl pl-2 pt-2"> <!-- resume_data -->
+                  <div class="pl-3 w-full mb-1"> <!--content-->
+                   <div>
+                     <div class="flex justify-between">
+                       <p class="font-bold"> <!-- content-title -->
+                         SUST Online Examination System Frontend | <i  class="font-normal">React, Bootstrap, HTML, CSS</i> 
+                       </p>
+                       <i onclick="hideAndShow(this, 'proj-item5')" class=" pt-2 animate-bounce text-lg  pr-2 fas fa-chevron-down justify-end cursor-pointer"></i>
+                     </div>
+                     <div id="proj-item5" class="hidden">
+                       <p>
+                         Developed an online platform for SUST Examination system.
+                         <a class="font-bold ml-2 text-blue hover:text-red hover:underline" href="https://github.com/SaiferGit/SUST-Online-Examination-System-Frontend/tree/master"> [Link]</a>
+                       </p>
+                     </div>
+                   </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+               
+         <!-- </ul> -->
      
        </div>
      </div>
  
      <!-- Achivements -->
-     <div class="py-5 px-0"> <!-- resume_item resume_achivements -->
+     <div class="py-5 px-0 border-b border-solid border-dark-gray"> <!-- resume_item resume_achivements -->
          <div class="text-black uppercase font-bold leading-6 text-xl mb-2.5 tracking-title"> <!-- resume_title -->
              Achivements
          </div>
        <div class=""> <!-- resume_info -->
-         <ul class="list-item list-disc ml-8">
-     
-           <li>
-             <div class=""> <!-- resume_data -->
-               <div class="pl-3 w-full mb-5"> <!-- content -->
-                 <p class="font-bold"> <!-- content-title -->
-                     Best Young Enterpreneurs 2018
-                 </p>
-                 <p class="italic">
-                     Sylhet District and Division Champion, 
-                     arranged by: Divisional Commissioner's Office, Sylhet.
-                 </p>
- 
-                 <ul class="list-item list-disc ml-8">
-                     <li>
-                         Contributed in both idea and solution.
-                     </li>
-                     <li>
-                         <b>Idea:</b> The ration given by government deliver to the right people in a corruption-free way.
-                     </li>
-                 </ul>
- 
-               </div>
-             </div>
-           </li>
- 
-         </ul>
+        <div class="flex relative">
+          <div class=" ml-2 absolute shadow-2xl skyblue h-3.5 w-3.5 top-3 left-0 border rounded-full bg-blue hidden sm:block md:block xl:block"></div>
+          
+          <ul class="list-item w-full ml-8">
+            <li>
+              <div class="bg-tea-green border-color1 border-2 rounded-xl pt-2 pl-2"> <!-- resume_data -->
+                <div class="pl-3 w-full mb-1"> <!-- content -->
+                  <div>
+                   <div class="flex justify-between">
+                     <p class="font-bold"> <!-- content-title -->
+                      Best Young Enterpreneurs 2018 
+                     </p>
+                     <i onclick="hideAndShow(this, 'achv-item1')" class=" pt-1 animate-bounce text-lg  pr-2 fas fa-chevron-down justify-end cursor-pointer"></i>
+                   </div>
+                    <div id="achv-item1" class="hidden">
+                      <p class="italic">
+                        Sylhet District and Division Champion, 
+                        arranged by: Divisional Commissioner's Office, Sylhet.
+                        <a class="font-bold ml-2 text-blue hover:text-red hover:underline not-italic" href="https://github.com/SaiferGit/DigitalLaundry">[Link]</a>
+                    </p>
+                      <ul class="list-item list-disc ml-8">
+                        <li>
+                            Contributed in both idea and solution.
+                        </li>
+                        <li>
+                            <b>Idea:</b> The ration given by government deliver to the right people in a corruption-free way.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+         
        </div>
      </div>
- 
+     
+    <!-- list of interests goes here -->
+    <div class="py-5 px-0"> <!-- resume_item resume_interests -->
+    <div class="text-black uppercase font-bold leading-6 text-xl mb-2.5 tracking-title"><!--resume_title-->
+    Interests
+    </div>
+    <div class="text-black flex justify-between text-center"> <!-- resume_info -->
+    <div class=""> <!-- interests -->
+        <div class="text-4xl mb-2.5 text-blue"> <!-- int_icon -->
+        <i class="fas fa-gamepad"></i>
+        </div>
+        <div class="text-lg"> <!-- int_data -->
+        Gaming
+        </div>
+    </div>
+
+    <div class=""> <!-- interests -->
+      <div class="text-4xl mb-2.5 text-blue"> <!-- int_icon -->
+        <i class="fas fa-biking"></i>
+      </div>
+      <div class="text-lg"> <!-- int_data -->
+        Cycling
+      </div>
+    </div>
+
+    <div class=""> <!--  interests -->
+      <div class="text-4xl mb-2.5 text-blue"> <!--  int_icon-->
+        <i class="fas fa-book-reader"></i>
+      </div>
+      <div class="text-lg"> <!-- int_data -->
+        Research
+      </div>
+    </div>
+    </div>
+    </div>
+
    </div>
   </div>
  </div>
+
+ <script src="./app.js"></script>
 </body>
 </html>
