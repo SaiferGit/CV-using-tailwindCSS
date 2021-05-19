@@ -14,7 +14,28 @@ function hideAndShow(curricon, currContentID) {
     }
 }
 
+let Wcontainer = document.getElementById("weather-container");
+console.log(Wcontainer);
+let Wicon = document.getElementById("weather-icon");
+console.log(Wicon);
+console.log(Wcontainer.classList);
+
+const toggleModal = () => {
+  Wcontainer.classList.toggle('hidden');
+  Wcontainer.classList.toggle('flex');
+};
+
+Wicon.addEventListener('click', function() {
+  showCurrWeather();
+  toggleModal();
+    // flex class is toggled on
+   // hidden class is toggled off
+  setTimeout(() => {
+    toggleModal();
+  }, 5000);
+});
+
 
 function showCurrWeather() {
-  
+  // const APIKEY = 
 }
