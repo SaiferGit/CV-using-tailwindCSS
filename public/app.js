@@ -1,5 +1,3 @@
-
-
 $(document).ready( function() {
   
   getCurrWeather();
@@ -47,31 +45,41 @@ $(document).ready( function() {
   function getCurrWeather() {
     const apiKey = '438fdbdf994a4f92b939017dd395c6da';
     const cityName = $('.cityName')[0].innerHTML;
-    console.log(cityName);
-    $.ajax({
-      method: 'GET',
-      url: 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=metric' + '&appid=' + apiKey,
-      dataType: 'jsonp',
-      success: function(data){
-        showRetrivedData(data);
-      },
+    const webUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=metric' + '&appid=' + apiKey;
+    
+    // $.ajax({
+    //   method: 'GET',
+    //   url: webUrl,
+    //   dataType: 'jsonp',
+    //   success: function(data){
+    //     showRetrivedData(data);
+    //   },
+    // });
+
+    axios.get(webUrl).then(function (response) {
+      // handle success
+      console.log(response);
+      showRetrivedData(response);
     });
   }
 
-  function showRetrivedData(data) {
-        const cityName = data.name;
-        const description = data.weather[0].description;
-        const temp = data.main.temp;
-        const feels_like = data.main.feels_like;
-        const humidity = data.main.humidity;
-        const pressure = data.main.pressure;
-        const windSpeed = data.wind.speed;
-        const imgSrc = 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
+  /*
+    ajax gets the value by data.name, whereas axois uses response.data.name
+  */
+
+  function showRetrivedData(response) {
+        const cityName = response.data.name;
+        const description = response.data.weather[0].description;
+        const temp = response.data.main.temp;
+        const feels_like = response.data.main.feels_like;
+        const humidity = response.data.main.humidity;
+        const pressure = response.data.main.pressure;
+        const windSpeed = response.data.wind.speed;
+        const imgSrc = 'http://openweathermap.org/img/wn/' + response.data.weather[0].icon + '@2x.png';
         
         
 
         $('#weatherImage').attr('src', imgSrc)
-        // $('#weatherImage').html('<img src= 'https://openweathermap.org/img/wn/04d.png'');
         $('.cityName').html(cityName);
         $('#desVal').html(description);
         $('#tempVal').html(temp + '&deg;C');
