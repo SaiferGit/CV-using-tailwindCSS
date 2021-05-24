@@ -47,20 +47,27 @@ $(document).ready( function() {
     const cityName = $('.cityName')[0].innerHTML;
     const webUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=metric' + '&appid=' + apiKey;
     
-    // $.ajax({
-    //   method: 'GET',
-    //   url: webUrl,
-    //   dataType: 'jsonp',
-    //   success: function(data){
-    //     showRetrivedData(data);
-    //   },
-    // });
+    /*
+    $.ajax({
+      method: 'GET',
+      url: webUrl,
+      dataType: 'jsonp',
+      success: function(data){
+        showRetrivedData(data);
+      },
+    });
+    */
 
-    axios.get(webUrl).then(function (response) {
+    axios.get(webUrl)
+    .then(function (response) {
       // handle success
       console.log(response);
       showRetrivedData(response);
-    });
+    })
+    .catch(function (error) {
+      // handle error
+      alert("Error: " + error);
+    })
   }
 
   /*
