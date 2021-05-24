@@ -9,6 +9,9 @@
  <!-- importing css files -->
  <link rel="stylesheet" href="styles.css">
  <link rel="stylesheet" href="./css/all.css">
+
+ <!-- importing js files -->
+ 
  
 </head>
 <body class="m-0 p-0 box-border font-bodyFont bg-body-color text-sm">
@@ -46,46 +49,50 @@
      
     <div class="relative">
       <div id="weather-container" class="absolute justify-center  items-center hidden">
-        <div class="border-1 border-gray-800 fixed w-96 left-16 md:left-0 md:w-5/12 lg:left-2 bg-color2 py-2 px-3 rounded-xl shadow-xl top-36 text-gray-800">
+        <div class="border-1 border-gray-800 fixed w-96 left-16 md:left-0 md:w-5/12 lg:w-4/12 lg:left-2 bg-color2 py-2 px-3 rounded-xl shadow-xl top-36 text-gray-800">
           <div class="flex items-center pb-2 ">
-            <i class="fas fa-cloud-sun-rain fa-2x border-gray-500 border-2 p-2 rounded-full"></i>
-            <div class="border-b-2 border-gray-400 w-full">
+            <!-- <i class="fas fa-cloud-sun-rain fa-2x border-gray-500 border-2 p-2 rounded-full"></i> -->
+            <img id="weatherImage" class="bg-body-color w-12 h-12 border-gray-500 border-2 p-0 rounded-full" src="" alt="">
+            <div class="flex justify-center border-b-2 border-gray-400 w-full">
               <div class="flex justify-evenly items-center">
                 <span class="text-xl font-bold ml-5">
-                  Weather in Kushtia
+                  Weather in 
+                  <span class="cityName">Kushtia</span> 
                   
                 </span>
-                <img class=" w-8 h-8" src="#" alt="">
+              </div>
+              <div class="">
+                <!-- <img id="weatherImage" class="w-12 h-12 rounded-full border-black border-2" src="" alt=""> -->
               </div>
             </div>
           </div>
           <div class=" text-base flex justify-around">
             <div class="flex-col w-1/2 pr-1">
-              <div class="flex justify-evenly text-2 border-1 p-1 rounded-md bg-color1  border-gray-800">
-                <span class="mr-3"> Description:</span>
-                <span>Unknown</span>
+              <div class="flex justify-around text-2 border-1 p-1 rounded-md bg-color1  border-gray-800">
+                <span class=""> Des:</span>
+                <span id="desVal">Unknown</span>
               </div> 
               <div class="flex justify-evenly mt-1 text-2 border-1 p-1 rounded-md border-gray-800 bg-color1">
                 <span> Temp:</span>
-                <span>Unknown</span>
+                <span id="tempVal">Unknown</span>
               </div> 
               <div class="flex justify-evenly mt-1 text-2 border-1 p-1 rounded-md border-gray-800 bg-color1 ">
                 <span> Feels Like:</span>
-                <span>Unknown</span>
+                <span id="feelsLikeVal">Unknown</span>
               </div> 
             </div>
             <div class="flex-col w-1/2 pl-1">
               <div class="flex justify-evenly text-2 border-1 p-1 rounded-md border-gray-800 bg-color1 ">
                 <span> Humidity:</span>
-                <span>Unknown</span>
+                <span id="humidityVal">Unknown</span>
               </div> 
               <div class="flex justify-evenly mt-1 text-2 border-1 p-1 rounded-md border-gray-800 bg-color1 ">
                 <span> Pressure:</span>
-                <span>Unknown</span>
+                <span id="pressureVal">Unknown</span>
               </div> 
               <div class="flex justify-evenly mt-1 text-2 border-1 p-1 rounded-md border-gray-800 bg-color1 ">
                 <span> Wind Speed:</span>
-                <span>Unknown</span>
+                <span id="windSpeedVal">Unknown</span>
               </div> 
             </div>
           </div>
@@ -98,8 +105,9 @@
       <div class="text-black flex"> <!-- resume_info -->
        <i id="weather-icon" class="fas fa-map-marker-alt text-black mr-1.5 mt-0 md:mt-2 text-xl cursor-pointer animate-bounce"></i> 
        <span class="">
-        47, Chourhash Colony Road,
-        Fultala, Kushtia 7000, Bangladesh
+        <span>47, Chourhash Colony Road, Fultala, </span> 
+        <span class="cityName">Kushtia</span> 
+        <span>7000, Bangladesh</span>
        </span>
       </div>
      </div>
@@ -670,6 +678,7 @@
   </div>
  </div>
 
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  <script src="./app.js"></script>
 </body>
 </html>
