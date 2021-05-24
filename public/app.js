@@ -41,7 +41,7 @@ function showCurrWeather(){
 function getCurrWeather() {
   const apiKey = '438fdbdf994a4f92b939017dd395c6da';
   const cityName = $('.cityName')[0].innerHTML;
-  const webUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=metric' + '&appid=' + apiKey;
+  const webUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=metric' + '&appid=' + apiKey;
   
   /*
   $.ajax({
@@ -78,7 +78,7 @@ function showRetrivedData(response) {
       const humidity = response.data.main.humidity;
       const pressure = response.data.main.pressure;
       const windSpeed = response.data.wind.speed;
-      const imgSrc = 'http://openweathermap.org/img/wn/' + response.data.weather[0].icon + '@2x.png';
+      const imgSrc = 'https://openweathermap.org/img/wn/' + response.data.weather[0].icon + '@2x.png';
       
       
 
